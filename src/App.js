@@ -2,14 +2,14 @@
 import './App.css';
 import Navbar from './componants/Navbar.js';
 import TextForm from './componants/TextForm.js';
-import About from './componants/About.js';
+// import About from './componants/About.js';
 import { useState } from 'react';
 import Alert from './componants/Alert.js';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 
 
 
@@ -67,7 +67,7 @@ function App() {
   
     document.body.style.backgroundColor='#9bb7d4';
     document.body.style.color='black';
-    showalert("You Enable Pink Mode","Success")
+    showalert("You Enable New Mode","Success")
 
     }
    
@@ -83,18 +83,20 @@ function App() {
   }
   return (
   <>
-  <Router>
+  {/* <Router> */}
       <Navbar title="TextUtils" mode={mode} togglemode={togglemode} togglemodepink={togglemodepink}></Navbar>
       <Alert alert={alert}/> 
       <div className="container mt-3">
       
-        <Routes>
-              <Route exact path="/" element={<TextForm heading="Enter the text to analyze below" />} />
-              <Route exact path="/About" element= {<About />} />      
+        {/* <Routes> */}
+              {/* <Route exact path="/" element={ */}
+              <TextForm heading="Enter the text to analyze below" />
+              {/* } /> */}
+              {/* <Route exact path="/About" element= {<About />} />       */}
 
-        </Routes>
+        {/* </Routes> */}
     </div>
-  </Router>
+  {/* </Router> */}
   </>
   );
 }
